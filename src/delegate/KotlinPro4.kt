@@ -4,7 +4,7 @@ import kotlin.properties.Delegates
 
 // 非空属性
 class MyPerson {
-    var address: String by Delegates.notNull<String>()
+    var address: String by Delegates.notNull()
 }
 
 fun main() {

@@ -5,10 +5,11 @@ import kotlin.reflect.KProperty
 // 委托属性
 
 class MyDelegate {
-    operator fun getValue(thisRef: Any, property: KProperty<*>): String = "$thisRef," +
+    // thisRef必须是属性所有者的类或其超类型
+    operator fun getValue(thisRef: MyPropertyClass, property: KProperty<*>): String = "$thisRef," +
             "your delegated property name is ${property.name}"
 
-    operator fun setValue(thisRef: Any, property: KProperty<*>, value: String) = println("$thisRef," +
+    operator fun setValue(thisRef: MyPropertyClass, property: KProperty<*>, value: String) = println("$thisRef," +
             "new value is $value")
 }
 
