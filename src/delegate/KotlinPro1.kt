@@ -1,4 +1,4 @@
-package kotlin1
+package delegate
 
 // 委托
 // 类委托
@@ -7,7 +7,7 @@ interface MyInterface2{
     fun myPrint()
 }
 
-class MyInterfaceImpl(private val str: String): MyInterface2{
+class MyInterfaceImpl(private val str: String): MyInterface2 {
     override fun myPrint() {
         println("welcome $str")
     }

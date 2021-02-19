@@ -1,4 +1,4 @@
-package kotlin1
+package basic
 
 class Person2 {
 

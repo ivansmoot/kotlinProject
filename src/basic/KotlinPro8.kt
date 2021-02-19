@@ -1,4 +1,4 @@
-package kotlin1
+package basic
 
 // 对象表达式
 // Java匿名内部类

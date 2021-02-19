@@ -1,4 +1,4 @@
-package kotlin1
+package basic
 
 // 嵌套类:对应Java的静态内部类
 

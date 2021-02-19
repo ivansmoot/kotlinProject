@@ -1,4 +1,4 @@
-package kotlin1
+package basic
 
 // 泛型函数
 

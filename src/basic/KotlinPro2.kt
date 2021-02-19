@@ -1,4 +1,4 @@
-package kotlin1
+package basic
 
 class MyStorage<out T>(private var t: T) {
     fun getValue(): T {
