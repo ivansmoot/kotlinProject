@@ -1,5 +1,6 @@
 package delegate
 
+import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
 // 委托属性
