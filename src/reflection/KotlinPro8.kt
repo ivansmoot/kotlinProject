@@ -1,10 +1,7 @@
 package reflection
 
 import kotlin.reflect.KMutableProperty
-import kotlin.reflect.full.functions
-import kotlin.reflect.full.memberFunctions
-import kotlin.reflect.full.memberProperties
-import kotlin.reflect.full.superclasses
+import kotlin.reflect.full.*
 
 interface Interface1{}
 
@@ -21,7 +18,11 @@ fun main() {
     println("----------")
 
 
+    // 通过类的构造方法构建实例
     val kot8 = KotlinPro8("ivan", 18)
+
+    // 通过KClass构建实例
+    val kot81 = kt8.createInstance()
 
     // 调用类方法
     val funcToInvoke = kt8.functions.find { it.name == "func" }
@@ -37,6 +38,6 @@ fun main() {
     // 修改类属性
     if (address2 is KMutableProperty<*>) {
         address2.setter.call(kot8, "sh2")
-        println(address2?.call(kot8))
+        println(address2.call(kot8))
     }
 }
