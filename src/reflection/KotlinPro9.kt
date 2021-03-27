@@ -1,6 +1,6 @@
 package reflection
 
-import kotlin.reflect.full.memberProperties
+import kotlin.reflect.jvm.javaField
 
 class KotlinPro9 {
     var name1: String = "ivan"
@@ -12,6 +12,7 @@ var fname = "smoot"
 fun main() {
     val topProp = ::fname
     topProp.set("Smoot")
+    print(topProp.javaField)
     println(topProp.get())
     println(fname)
 
